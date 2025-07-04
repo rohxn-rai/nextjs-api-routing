@@ -27,7 +27,7 @@ function HomePage() {
   const loadFeedbackHandler = () => {
     fetch("/api/feedback")
       .then((response) => response.json())
-      .then((data) => setFeedbackItems(data.feedback));
+      .then((data) => setFeedbackItems(data.feedbackItems));
   };
 
   return (

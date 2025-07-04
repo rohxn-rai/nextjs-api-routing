@@ -30,9 +30,10 @@ const handler = (req, res) => {
     const filePath = buildFeedbackPath();
     const data = extractFeedback(filePath);
     res.status(200).json({
-      feedback: data,
+      feedbackItems: data,
     });
   }
 };
 
+export { buildFeedbackPath, extractFeedback };
 export default handler;
